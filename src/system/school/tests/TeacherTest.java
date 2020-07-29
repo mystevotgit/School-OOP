@@ -37,4 +37,8 @@ class TeacherTest {
         stack_lead.view();
     }
 
+    @Test
+    void getDate_of_birth() {
+        assertEquals(1991, stack_lead.getDate_of_birth());
+    }
 }

@@ -6,12 +6,16 @@ public class Person {
     private String gender;
     private int year_of_birth;
 
+
+//    Constructor of the Person class
     public Person(String name, String gender, int year_of_birth) {
         this.name = name;
         this.gender = gender;
         this.year_of_birth = year_of_birth;
     }
 
+
+//    Getters and setters of the Person class.
     public void setId(int id) { this.id = id;
         return;
     }

@@ -6,7 +6,8 @@ import java.util.List;
 /**
  * This is a school object having the characteristics
  * of a school.
- * It implement Teachers and Students using an ArrayList.
+ * It contain list of teachers, students, courses, classes and applicants.
+ * it contain the principal too. This demonstrates composition.
  */
 public class School {
     private static String name;
@@ -20,6 +21,7 @@ public class School {
 
     /**
      * This method creates a new school object.
+     * it is the constructor of the school class.
      * @param name
      * @param principal
      */
@@ -34,6 +36,9 @@ public class School {
         this.applicants = new ArrayList<>();
     }
 
+
+    //  The following methods are getters and setters for the fields in the school class.
+
     public static String getName() {
         return name;
     }
@@ -46,38 +51,36 @@ public class School {
         return non_academics;
     }
 
-    public String addNon_academic(Non_Academic non_academic) {
-        this.non_academics.add(non_academic);
-        return non_academic.getName();
-    }
-
     public static List<Student> getStudents() {
         return students;
-    }
-
-    public String addStudent(Student student) {
-        int length = students.size();
-        this.students.add(student);
-        return students.get(length).getName();
     }
 
     public static List<Teacher> getTeachers() {
         return teachers;
     }
 
-    public void addTeacher(Teacher teacher) {
-        this.teachers.add(teacher);
-    }
-    public List<Non_Academic> getNon_Academics() {
-        return non_academics;
+    public int getNon_Academics() {
+        for (int i = 0; i < non_academics.size(); i++) {
+            System.out.println(i + 1 + non_academics.get(i).getName());
+        }
+        return non_academics.size();
     }
 
     public static List<Applicant> getApplicants() {
         return applicants;
     }
 
+    public static List<Class> getClasses() {
+        return classes;
+    }
+    public static List<Course> getCourses() {
+        return courses;
+    }
+
+
+
     /**
-     * This method will add applicants to the applicants list.
+     * This method will add applicants to the applicant's list.
      * @param applicant
      * @return
      */
@@ -89,9 +92,49 @@ public class School {
         return index;
     }
 
-    public static List<Course> getCourses() {
-        return courses;
+    /**
+     * This method will add non academic staff to the non academic staff's list.
+     * @param non_academic
+     * @return
+     */
+
+    public String addNon_academic(Non_Academic non_academic) {
+        this.non_academics.add(non_academic);
+        int index = non_academics.size();
+        non_academics.get(index - 1).setId(index);
+        return non_academics.get(index - 1).getName();
     }
+
+    /**
+     * This method will add teacher to the teacher's list.
+     * @param teacher
+     * @return
+     */
+
+    public String addTeacher(Teacher teacher) {
+        teachers.add(teacher);
+        int index = teachers.size();
+        teachers.get(index - 1).setId(index);
+        return teachers.get(index - 1).getName();
+    }
+
+    /**
+     * This method will add student to the student's list.
+     * @param student
+     * @return
+     */
+
+    public String addStudent(Student student) {
+        int length = students.size();
+        this.students.add(student);
+        return students.get(length).getName();
+    }
+
+    /**
+     * This method will add course to the course list.
+     * @param course
+     * @return
+     */
 
     public String addCourse(Course course) {
         int length = classes.size();
@@ -99,9 +142,11 @@ public class School {
         return courses.get(length).getDuration();
     }
 
-    public static List<Class> getClasses() {
-        return classes;
-    }
+    /**
+     * This method will add class to the class list.
+     * @param newClass
+     * @return
+     */
 
     public String addClass(Class newClass) {
         int length = classes.size();

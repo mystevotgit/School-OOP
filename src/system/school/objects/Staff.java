@@ -5,11 +5,16 @@ public class Staff extends Person {
     private String password;
     private int salary;
 
+
+//   Constructor of the Staff class. Staff inherits from the Person object because each staff is a person.
     public Staff(String role, String name, String gender, int salary, int year_of_birth, String password) {
         super(name, gender, year_of_birth);
+        this.role = role;
+        this.password = password;
+        this.salary = salary;
     }
 
-
+//  getter of the staff class.
     public int getId() {
         return super.getId();
     }
@@ -24,10 +29,6 @@ public class Staff extends Person {
 
     public int getSalary() {
         return salary;
-    }
-
-    public String getPassword() {
-        return password;
     }
 
     public int getYear_of_birth() {

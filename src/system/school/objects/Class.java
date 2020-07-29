@@ -14,6 +14,7 @@ public class Class {
         this.duration = duration;
     }
 
+    //  This method will allow the class object to be updated.
     public void reschedule(int id, String course, String day, String start_time, String duration) {
         this.id = id;
         this.course = course;
@@ -22,6 +23,8 @@ public class Class {
         this.duration = duration;
     }
 
+
+//    Getters and setters for the class object.
     public String getCourse() {
         return course;
     }

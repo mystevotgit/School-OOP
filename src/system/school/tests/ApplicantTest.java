@@ -20,13 +20,16 @@ class ApplicantTest {
 
     @Test
     void getName() {
+        assertThat(Decabelle.getName(), instanceOf(String.class));
     }
 
     @Test
     void getScore() {
+        assertThat(Decabelle.getScore(), instanceOf(Integer.class));
     }
 
     @Test
     void getYear_of_birth() {
+        assertThat(Decabelle.getYear_of_birth(), instanceOf(Integer.class));
     }
 }

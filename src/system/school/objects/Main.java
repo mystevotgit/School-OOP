@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import static jdk.nashorn.internal.objects.NativeMap.size;
 
+//  Development in progress...
 public class Main {
     public static void main(String[] args) {
     //  print the School menu for the user.
@@ -67,6 +68,8 @@ public class Main {
 
     }
 
+
+    //  Development in progress.....
     public static void viewSchool() {
         System.out.println("Select and type an action from the menu: (about_school  courses  register  login  exit)\n");
         Scanner scan = new Scanner(System.in);
@@ -102,6 +105,7 @@ public class Main {
 
             Applicant applicant = new Applicant(name, gender, score, year);
             School.addApplicant(applicant);
+
         }
     }
 }

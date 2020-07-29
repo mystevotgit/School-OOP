@@ -97,6 +97,7 @@ class SchoolTest {
         assertEquals("1 week", Decagon.addCourse(new Course("scrum fundamentals", "michael", "1 week")));
     }
 
+    @Test
     void addCourse3() {
         assertEquals("3 weeks", Decagon.addCourse(new Course("technical writing", "nkem alozie", "3 weeks")));
     }
@@ -113,5 +114,41 @@ class SchoolTest {
         assertEquals("1 hour", Decagon.addClass(new Class("scum fundamentals", "Wednesday", "9:00 AM", "1 hour")));
     }
 
+    @Test
+    void addTeacher() {
+        Teacher chibueze = new Teacher("Stack lead", "chibueze", "M", 400_000, 1991, "123") {
+            @Override
+            public void view() {
+                System.out.println("Here are the staffs of " + Decagon.getName());
+                System.out.println("Principal: " + Decagon.getPrincipal());
+                System.out.println("Teachers: " + Decagon.getTeachers().toString());
+                System.out.println("Students: " + Decagon.getStudents().toString());
+                System.out.println("Courses: " + Decagon.getCourses().toString());
+                System.out.println("Classes: " + Decagon.getClasses().toString());
+            }
+        };
+        assertEquals("chibueze", Decagon.addTeacher(chibueze));
 
+    }
+
+    @Test
+    void addNon_academics() {
+        Non_Academic taofiq = new Non_Academic("admin", "taofiq", "F", 300_000, 1994, "123") {
+            @Override
+            public void view() {
+                System.out.println("Principal: " + Decagon.getPrincipal().toString());
+                System.out.println("Teachers: " + Decagon.getTeachers().toString());
+                System.out.println("Non Academic Staffs: " + Decagon.getNon_academics().toString());
+                System.out.println("Students: " + Decagon.getStudents().toString());
+                System.out.println("Applicants: " + Decagon.getApplicants().toString());
+                System.out.println("Courses: " + Decagon.getCourses().toString());
+            }
+        };
+        assertEquals("taofiq", Decagon.addNon_academic(taofiq));
+    }
+
+    @Test
+    void getNon_academics() {
+        assertEquals(0, Decagon.getNon_Academics());
+    }
 }

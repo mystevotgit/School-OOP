@@ -6,6 +6,8 @@ import java.util.List;
 /**
  * This is a student object having the characteristics
  * of students of the school.
+ * The Student object extends the Person object because a student is a person.
+ * This demonstrates inheritance.
  */
 
 public class Student extends Person {
@@ -44,6 +46,7 @@ public class Student extends Person {
 
     public void setId(int id) {
         super.setId(id);
+        return;
     }
 
     /**
@@ -103,6 +106,11 @@ public class Student extends Person {
         return super.getYear_of_birth();
     }
 
+    /**
+     * This method allows the students to take a course.
+     * @param course
+     * @return
+     */
 
     public String takeCourse(Course course) {
         courses.add(course);

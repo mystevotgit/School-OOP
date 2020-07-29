@@ -1,20 +1,19 @@
 package system.school.objects;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Course {
     private String name;
     private String teacher;
     private String duration;
-    private List<Class> classes = new ArrayList<>();
 
+//    Constructor of the course class
     public Course(String name, String teachers, String duration) {
         this.name = name;
         this.teacher = teachers;
         this.duration = duration;
     }
 
+
+//    Getters of the course object.
     public String getName() {
         return name;
     }
@@ -27,10 +26,4 @@ public class Course {
         return duration;
     }
 
-    public String addClass(Class aClass) {
-        int length = classes.size();
-        classes.add(aClass);
-        classes.get(length - 1);
-        return "";
-    }
 }
