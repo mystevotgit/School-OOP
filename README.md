@@ -29,7 +29,7 @@ The objects listed above are the fields in the school object and the school *Con
 ### Encapsulation
 The school field are declared with the *private* access modifier which gives *Encapsulation* to the object.
 
-Encapsulation is simply the process of hiding the data of an object.
+Encapsulation is simply the process of hiding the data of an object. In other words, it is called Wrapping.
 To achieve encapsulation in Java −
 
 * Declare the variables of a class as private.
@@ -48,3 +48,13 @@ In this school system, I implemented inheritance by doing the following:
 
 In a school, the principal, teachers and non-academic staff are all staffs. Hence, they all inherits from a staff class i created.
 Also, the staffs, students and applicants are all people and each of them is a person. Hence, staff, student and applicant class inherits from the person class i created.
+
+### Abstraction
+Some objects contained in the school object were created using *Abstraction*.
+
+Abstraction involves hiding the implementation details of a method. In Java abstraction is achieved through abstract classes and interfaces.
+
+* Interfaces is a collection of abstract methods only.
+* Abstract class is a class having at least one abstract method and other class fields and methods.
+
+In this project, I created the pricipal, teacher and non-teaching staff class as abstract classes by allowing them to implement an authorization interface.
