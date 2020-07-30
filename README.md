@@ -36,3 +36,15 @@ To achieve encapsulation in Java −
 * Provide public setter and getter methods to modify and view the variables values.
 
 ### Inheritance
+Some objects contained in the school object were created using *Inheritance*.
+
+Inheritance in Java is a mechanism in which one object acquires all the properties and behaviors of a parent object. Inheritance allows the creation of new classes that are built upon existing classes. It promotes code reuseability.
+
+In this school system, I implemented inheritance by doing the following:
+
+1. I identified what some objects have in common.
+2. I created an object (Parent Class) having the properties those objects have in common.
+3. I allowed each object sharing the properties of the parent class to inherit from it.
+
+In a school, the principal, teachers and non-academic staff are all staffs. Hence, they all inherits from a staff class i created.
+Also, the staffs, students and applicants are all people and each of them is a person. Hence, staff, student and applicant class inherits from the person class i created.
