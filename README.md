@@ -58,3 +58,6 @@ Abstraction involves hiding the implementation details of a method. In Java abst
 * Abstract class is a class having at least one abstract method and other class fields and methods.
 
 In this project, I created the pricipal, teacher and non-teaching staff class as abstract classes by allowing them to implement an authorization interface.
+
+### Polymorpism
+To be updated later...
