@@ -59,5 +59,5 @@ Abstraction involves hiding the implementation details of a method. In Java abst
 
 In this project, I created the pricipal, teacher and non-teaching staff class as abstract classes by allowing them to implement an authorization interface.
 
-### Polymorpism
+### Polymorphism
 To be updated later...
